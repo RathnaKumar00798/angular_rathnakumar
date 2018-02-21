@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+Firstname : <input type="text" ng-model="firstname" placeholder="enter firstname"><br>
+ Lastname  : <input type="text" ng-model="lastname" placeholder="enter lastname"><br>
+<br>
+{{class()}}
+   
+</div>
+<script>
+   var app = angular.module('myApp',[]);
+ app.controller('myCtrl',function($scope){
+$scope.firstname;
+$scope.lastname;
+$scope.class=function(){
+return $scope.firstname+ " " +$scope.lastname;
+ };
+});
+   
+</script>
+
+</body>
+</html>
